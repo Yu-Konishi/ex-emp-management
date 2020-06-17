@@ -29,7 +29,7 @@ public class AdministratorController {
 	 */
 	@Autowired
 	private AdministratorService administratorService;
-	
+
 	/**
 	 * セッションスコープ
 	 */
@@ -55,9 +55,10 @@ public class AdministratorController {
 	public LoginForm setUpLoginForm() {
 		return new LoginForm();
 	}
-	
+
 	/**
 	 * ログイン画面を表示.
+	 * 
 	 * @return ログイン画面
 	 */
 	@RequestMapping("/")
@@ -89,12 +90,19 @@ public class AdministratorController {
 		administratorService.insert(administrator);
 		return "redirect:/";
 	}
-	
+
+	/**
+	 * ログイン機能.
+	 * 
+	 * @param form  フォーム
+	 * @param model リクエストスコープ
+	 * @return 従業員情報一覧ページ(ログインに失敗した場合はログインページ)
+	 */
 	@RequestMapping("/login")
-	public String login(LoginForm form,Model model) {
+	public String login(LoginForm form, Model model) {
 		Administrator administrator = administratorService.login(form.getMailAddress(), form.getPassword());
-		if(administrator == null) {
-			model.addAttribute("error","メールアドレスまたはパスワードが不正です。");
+		if (administrator == null) {
+			model.addAttribute("error", "メールアドレスまたはパスワードが不正です。");
 			return toLogin();
 		}
 		session.setAttribute("administratorName", administrator.getName());

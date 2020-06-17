@@ -1,7 +1,8 @@
 package jp.co.sample.form;
 
 /**
- * ログインフォーム
+ * ログインフォーム.
+ * 
  * @author yu.konishi
  *
  */
@@ -11,7 +12,7 @@ public class LoginForm {
 	 * メールアドレス
 	 */
 	private String mailAddress;
-	
+
 	/**
 	 * パスワード
 	 */
