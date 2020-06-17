@@ -15,7 +15,7 @@ import jp.co.sample.form.LoginForm;
 import jp.co.sample.service.AdministratorService;
 
 /**
- * 管理者登録画面の処理を行うコントローラ.
+ * 管理者情報関連の処理を行うコントローラ.
  * 
  * @author yu.konishi
  *
