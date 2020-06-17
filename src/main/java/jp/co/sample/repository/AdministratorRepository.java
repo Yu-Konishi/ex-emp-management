@@ -13,7 +13,8 @@ import org.springframework.stereotype.Repository;
 import jp.co.sample.domain.Administrator;
 
 /**
- * administratorsを操作するリポジトリ(DAO)
+ * administratorsを操作するリポジトリ.(DAO)<br>
+ * 
  * @author yu.konishi
  *
  */
@@ -21,7 +22,7 @@ import jp.co.sample.domain.Administrator;
 public class AdministratorRepository {
 
 	/**
-	 * Administratorオブジェクトを生成
+	 * Administratorオブジェクトを生成.
 	 */
 	private static final RowMapper<Administrator> ADMINISTRATOR_ROW_MAPPER = (rs, i) -> {
 		Administrator administrator = new Administrator();
@@ -33,13 +34,14 @@ public class AdministratorRepository {
 	};
 
 	/**
-	 * JDBCを操作するテンプレート
+	 * JDBCを操作するテンプレート.
 	 */
 	@Autowired
 	private NamedParameterJdbcTemplate template;
 
 	/**
-	 * 管理者情報を挿入する
+	 * 管理者情報を挿入.
+	 * 
 	 * @param administrator 管理者情報
 	 */
 	public void insert(Administrator administrator) {
@@ -50,9 +52,10 @@ public class AdministratorRepository {
 	}
 
 	/**
-	 * メールアドレスとパスワードから管理者情報を取得する(1件も存在しない場合はnullを返す)
+	 * メールアドレスとパスワードから管理者情報を取得.
+	 * 
 	 * @param mailAddress メールアドレス
-	 * @param password パスワード
+	 * @param password    パスワード
 	 * @return 該当した管理者情報(1件も存在しない場合はnull)
 	 */
 	public Administrator findByMailAddressAndPassword(String mailAddress, String password) {
