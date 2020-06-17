@@ -22,7 +22,7 @@ import jp.co.sample.domain.Employee;
 public class EmployeeRepository {
 
 	/**
-	 * Employeeオブジェクトを生成.
+	 * Employeeオブジェクトを生成
 	 */
 	private static final RowMapper<Employee> EMPLOYEE_ROW_MAPPER = (rs, i) -> {
 		Employee employee = new Employee();
@@ -42,7 +42,7 @@ public class EmployeeRepository {
 	};
 
 	/**
-	 * JDBCを操作するテンプレート.
+	 * JDBCを操作するテンプレート
 	 */
 	@Autowired
 	private NamedParameterJdbcTemplate template;

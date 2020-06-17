@@ -22,7 +22,7 @@ import jp.co.sample.domain.Administrator;
 public class AdministratorRepository {
 
 	/**
-	 * Administratorオブジェクトを生成.
+	 * Administratorオブジェクトを生成
 	 */
 	private static final RowMapper<Administrator> ADMINISTRATOR_ROW_MAPPER = (rs, i) -> {
 		Administrator administrator = new Administrator();
@@ -34,7 +34,7 @@ public class AdministratorRepository {
 	};
 
 	/**
-	 * JDBCを操作するテンプレート.
+	 * JDBCを操作するテンプレート
 	 */
 	@Autowired
 	private NamedParameterJdbcTemplate template;

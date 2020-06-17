@@ -9,6 +9,7 @@ import jp.co.sample.repository.AdministratorRepository;
 
 /**
  * 管理者情報を操作するサービス.
+ * 
  * @author yu.konishi
  *
  */
@@ -17,13 +18,14 @@ import jp.co.sample.repository.AdministratorRepository;
 public class AdministratorService {
 	
 	/**
-	 * 管理者情報テーブルを操作するリポジトリ.
+	 * 管理者情報テーブルを操作するリポジトリ
 	 */
 	@Autowired
 	private AdministratorRepository administratorRepository;
 	
 	/**
-	 * 管理者情報を挿入をリポジトリに指示
+	 * 管理者情報を挿入をリポジトリに指示.
+	 * 
 	 * @param administrator 管理者情報	
 	 */
 	public void insert(Administrator administrator) {

@@ -1,33 +1,21 @@
 package jp.co.sample.form;
 
 /**
- * 管理者情報登録フォーム.
- * 
+ * ログインフォーム
  * @author yu.konishi
  *
  */
-public class InsertAdministratorForm {
+public class LoginForm {
 
-	/**
-	 * 名前
-	 */
-	private String name;
 	/**
 	 * メールアドレス
 	 */
 	private String mailAddress;
+	
 	/**
 	 * パスワード
 	 */
 	private String password;
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public String getMailAddress() {
 		return mailAddress;
@@ -47,8 +35,6 @@ public class InsertAdministratorForm {
 
 	@Override
 	public String toString() {
-		return "InsertAdministratorForm [name=" + name + ", mailAddress=" + mailAddress + ", password=" + password
-				+ "]";
+		return "LoginForm [mailAddress=" + mailAddress + ", password=" + password + "]";
 	}
-
 }

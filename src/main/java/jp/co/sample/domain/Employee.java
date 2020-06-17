@@ -3,7 +3,7 @@ package jp.co.sample.domain;
 import java.util.Date;
 
 /**
- * 従業員情報を表すドメイン
+ * 従業員情報を表すドメイン.
  * 
  * @author yu.konishi
  *
@@ -22,39 +22,39 @@ public class Employee {
 	 */
 	private String image;
 	/**
-	 * 性別.
+	 * 性別
 	 */
 	private String gender;
 	/**
-	 * 入社日.
+	 * 入社日
 	 */
 	private Date hireDate;
 	/**
-	 * メールアドレス.
+	 * メールアドレス
 	 */
 	private String mailAddress;
 	/**
-	 * 郵便番号.
+	 * 郵便番号
 	 */
 	private String zipCode;
 	/**
-	 * 住所.
+	 * 住所
 	 */
 	private String address;
 	/**
-	 * 電話番号.
+	 * 電話番号
 	 */
 	private String telephone;
 	/**
-	 * 給料.
+	 * 給料
 	 */
 	private Integer salary;
 	/**
-	 * 特徴.
+	 * 特徴
 	 */
 	private String characteristics;
 	/**
-	 * 扶養人数.
+	 * 扶養人数
 	 */
 	private Integer dependentsCount;
 
