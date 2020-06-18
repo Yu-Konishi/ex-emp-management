@@ -34,4 +34,14 @@ public class EmployeeService {
 		return employeeRepository.findAll();
 	}
 
+	/**
+	 * IDに該当する従業員情報の取得を指示.
+	 * 
+	 * @param id ID
+	 * @return 従業員情報
+	 */
+	public Employee showDetail(Integer id) {
+		return employeeRepository.load(id);
+	}
+
 }
