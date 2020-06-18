@@ -19,6 +19,7 @@ public class InsertAdministratorForm {
 	/**
 	 * メールアドレス
 	 */
+	@NotBlank(message="メールアドレスを入力してください")
 	@Email(message="メールアドレスを入力してください")
 	private String mailAddress;
 	/**

@@ -1,5 +1,7 @@
 package jp.co.sample.form;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * 従業員情報更新フォーム.
  * 
@@ -15,6 +17,7 @@ public class UpdateEmployeeForm {
 	/**
 	 * 扶養人数
 	 */
+	@NotBlank(message="扶養人数を入力してください")
 	private String dependentsCount;
 
 	public String getId() {

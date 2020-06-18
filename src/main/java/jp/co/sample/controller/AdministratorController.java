@@ -87,7 +87,7 @@ public class AdministratorController {
 	@RequestMapping("/insert")
 	public String insert(@Validated InsertAdministratorForm form, BindingResult result) {
 		if(result.hasErrors()) {
-			return "/toInsert";
+			return toInsert();
 		}
 		Administrator administrator = new Administrator();
 		// フォームのデータをドメインにコピーする

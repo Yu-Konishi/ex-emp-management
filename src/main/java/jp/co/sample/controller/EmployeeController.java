@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -48,7 +50,7 @@ public class EmployeeController {
 	public String showList(Model model) {
 		List<Employee> employeeList = employeeService.showList();
 		model.addAttribute("employeeList", employeeList);
-		return "employee/list.html";
+		return "employee/list";
 	}
 
 	/**
@@ -72,7 +74,11 @@ public class EmployeeController {
 	 * @return 従業員一覧画面
 	 */
 	@RequestMapping("/update")
-	public String update(UpdateEmployeeForm form) {
+	public String update(@Validated UpdateEmployeeForm form,BindingResult result,Model model) {
+		if(result.hasErrors()) {
+			return showDetail(form.getId(), model);
+		}
+		
 		Employee employee = employeeService.showDetail(Integer.parseInt(form.getId()));
 		employee.setDependentsCount(Integer.parseInt(form.getDependentsCount()));
 		employeeService.update(employee);
