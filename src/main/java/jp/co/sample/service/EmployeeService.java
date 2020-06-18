@@ -44,4 +44,13 @@ public class EmployeeService {
 		return employeeRepository.load(id);
 	}
 
+	/**
+	 * 従業員情報の更新を指示.
+	 * 
+	 * @param employee 従業員情報
+	 */
+	public void update(Employee employee) {
+		employeeRepository.update(employee);
+	}
+
 }
